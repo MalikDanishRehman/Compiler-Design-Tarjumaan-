@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjuman Compiler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+
+    <h1>🚀 Tarjuman: Urdu Code Runner</h1>
+
+    <form method="POST">
+        <div class="container">
+            
+            <div class="box-wrapper">
+                <h3 class="input-title">Urdu Code (Input)</h3>
+                <textarea name="code_area" spellcheck="false" placeholder="Yahan code likhein...&#10;&#10;Misal:&#10;x = 10&#10;agar x > 5:&#10;    dikhao 'Salam Pakistan'">{{ code }}</textarea>
+            </div>
+            
+            <div class="box-wrapper">
+                <h3 class="output-title">Nateeja (Terminal)</h3>
+                <textarea readonly placeholder="Run dabane par jawab yahan aayega...">{{ result }}</textarea>
+            </div>
+
+        </div>
+
+        <div class="btn-container">
+            <button type="submit">Run Code ⚡</button>
+        </div>
+    </form>
+
+    <div class="footer">
+        Created by <strong>Group Tarjuman</strong> | Final Year Project
+    </div>
+
+</body>
+</html>
